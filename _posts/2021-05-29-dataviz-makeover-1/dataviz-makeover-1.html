@@ -116,7 +116,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["dataviz-makeover-1_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-1_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-1_files/distill-2.2.21/template.v2.js","dataviz-makeover-1_files/header-attrs-2.8/header-attrs.js","dataviz-makeover-1_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-1_files/popper-2.6.0/popper.min.js","dataviz-makeover-1_files/tippy-6.2.7/tippy-bundle.umd.min.js","dataviz-makeover-1_files/tippy-6.2.7/tippy-light-border.css","dataviz-makeover-1_files/tippy-6.2.7/tippy.css","dataviz-makeover-1_files/tippy-6.2.7/tippy.umd.min.js","dataviz-makeover-1_files/webcomponents-2.0.0/webcomponents.js","img/change-1.png","img/change-10.png","img/change-2.png","img/change-3.png","img/change-4.png","img/change-5.png","img/change-6.png","img/change-7.png","img/change-8.png","img/change-9.png","img/original.png","img/Population.jpg"]}
+  {"type":"character","attributes":{},"value":["dataviz-makeover-1_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-1_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-1_files/distill-2.2.21/template.v2.js","dataviz-makeover-1_files/header-attrs-2.8/header-attrs.js","dataviz-makeover-1_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-1_files/popper-2.6.0/popper.min.js","dataviz-makeover-1_files/tippy-6.2.7/tippy-bundle.umd.min.js","dataviz-makeover-1_files/tippy-6.2.7/tippy-light-border.css","dataviz-makeover-1_files/tippy-6.2.7/tippy.css","dataviz-makeover-1_files/tippy-6.2.7/tippy.umd.min.js","dataviz-makeover-1_files/webcomponents-2.0.0/webcomponents.js","img/change-1.png","img/change-10.png","img/change-2.png","img/change-3.png","img/change-4.png","img/change-5.png","img/change-6.png","img/change-7.png","img/change-8.png","img/change-9.png","img/original.png","img/Population.jpg","img/sketch.jpg"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1494,12 +1494,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li>The stacked form of graphics. Due to the large number of countries studied, the six graphs are stacked together in a 2*3 manner, which makes the originally small graphs smaller and more difficult to see subtle changes.</li>
 </ul>
 <h1 id="sketch-of-the-proposed-design">2.0 Sketch of the proposed design</h1>
+<p>With reference to Critic , an alternative representation is sketched below. <img src="img/sketch.jpg" /></p>
 <h2 id="clarity-1">2.1 Clarity</h2>
-<p>Next, you will use the code chunk below to install and launch ggpubr and tidyverse in RStudio.</p>
+<ul>
+<li>Change the chart to a line chart makes it easier to compare the difference between imports and exports.</li>
+<li>The year and month of the x-axis are clear, and the date can be adjusted at the same time, so that it is easy to find the exact date or time period.</li>
+<li>Add the value of Monthly growth rate. We can see the trend of changes in imports and exports more intuitively</li>
+</ul>
 <h2 id="aesthetic">2.2 Aesthetic</h2>
-<p>packages = c(‘ggpubr’, ‘tidyverse’)</p>
+<ul>
+<li>Arrange all countries horizontally to facilitate comparison between different countries. In addition, we can select any one or more countries.</li>
+<li>Colour is used to bring to attention different Type, import or export.</li>
+<li>Separate the statistics for the two years, and list the year at the top of the chart.</li>
+</ul>
 <h1 id="proposed-visualisation-designed-in-tableau">3.0 Proposed Visualisation designed in Tableau</h1>
-<p>Please view the interactive visualisation on Tableau Public <a href="网页">here</a></p>
+<p>Please view the interactive visualisation on Tableau Public <a href="https://public.tableau.com/app/profile/huining.tang/viz/MerchandiseTrade_16223827330810/Sheet1">here</a></p>
 <h1 id="a-step-by-step-description-of-how-the-data-visualization-was-prepared">4.0 A step-by-step description of how the data visualization was prepared</h1>
 <ol type="1">
 <li><p>Delete extra values in the original database using excel, change file name into import and export. <img src="img/change-1.png" /></p></li>
@@ -1512,8 +1521,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><p>Repeat the following steps for both Import and Export sections.Use Microsoft Excel to merge two files, add a new Type column to identify the type. <img src="img/change-8.png" /></p></li>
 <li><p>Import the cleaned dataset into Tableau.Change column name into more clearer one. <img src="img/change-9.png" /></p></li>
 <li><p>Change Date data type into ‘Date’. <img src="img/change-10.png" /></p></li>
-<li><h1 id="three-major-observations-revealed-by-the-data-visualisation-prepared">5.0 Three major observations revealed by the data visualisation prepared</h1></li>
+<li><p>Add</p></li>
 </ol>
+<h1 id="three-major-observations-revealed-by-the-data-visualisation-prepared">5.0 Three major observations revealed by the data visualisation prepared</h1>
+<ul>
+<li><p>The export value of Hong Kong and Taiwan is obviously greater than the import value, and there is a trade surplus. The foreign trade of these two countries is in a favorable position. But this may affect a country’s currency to some extent.</p></li>
+<li><p>In general, the imports and exports of commodities in the remaining countries have an upward trend, of which Taiwan and China have the most obvious upward trends. It is worth noting that in the first quarter of 2020, the import and export of merchandise in different countries all have a certain degree of decline, of which Malaysia has the largest volatility. This may be related to the COVID-19 outbreak in early 2020.</p></li>
+<li><p>The monthly changes in imports and exports are similar.The monthly changes in imports and exports are similar. Judging from the changes in the monthly growth rate in the figure, the imports and exports of countries usually increase or decrease at similar rates. In addition to national macro-control factors, trade between countries also has mutual influence. This also shows that the ratio of a country’s imports and exports is basically maintained in a stable range.</p></li>
+</ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

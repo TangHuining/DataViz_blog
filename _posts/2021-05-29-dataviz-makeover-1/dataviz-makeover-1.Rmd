@@ -35,12 +35,12 @@ The original visualisation can be seen below.
 
 
 # 2.0 Sketch of the proposed design
-
-
+With reference to Critic , an alternative representation is sketched below.
+![](img/sketch.jpg)
 
 ## 2.1 Clarity
 
-Next, you will use the code chunk below to install and launch ggpubr and tidyverse in RStudio.
+
 
 ## 2.2 Aesthetic
 packages = c('ggpubr', 'tidyverse')
@@ -74,6 +74,7 @@ Please view the interactive visualisation on Tableau Public [here](网页)
 9. Change Date data type into 'Date'.
 ![](img/change-10.png)
 10.
+Add
 # 5.0 Three major observations revealed by the data visualisation prepared
 
 
