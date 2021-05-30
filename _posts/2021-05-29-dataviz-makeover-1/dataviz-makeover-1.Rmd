@@ -60,29 +60,67 @@ Please view the interactive visualisation on Tableau Public [here](https://publi
 # 4.0 A step-by-step description of how the data visualization was prepared
 
 1. Delete extra values in the original database using excel, change file name into import and export.
+
 ![](img/change-1.png)
 
 2. Import the data into Tableau.Link two charts.
+
 ![](img/change-2.png)
-3. Change data type to number. 
+3. Change data type to number.
+
 ![](img/change-3.png)
 4. Use Tableau to pivot the data in both sheet. Drop measure values into columns and Measure names and country into rows.
+
 ![](img/change-4.png)
-5. Select all values from 2019 Jan to 2020 Dec from the Import/Export sheet, measure in sum. Delete other extra values.Do this in both sheets.  
+5. Select all values from 2019 Jan to 2020 Dec from the Import/Export sheet, measure in sum. Delete other extra values.Do this in both sheets. 
+
 ![](img/change-5.png)
 6. View Data and export all data.
+
 ![](img/change-6.png)
 ![](img/change-7.png)
 7. Repeat the following steps for both Import and Export sections.Use Microsoft Excel to merge two files, add a new Type column to identify the type.
+
 ![](img/change-8.png)
 8. Import the cleaned dataset into Tableau.Change column name into more clearer one.
+
 ![](img/change-9.png)
 9. Change Date data type into 'Date'.
+
 ![](img/change-10.png)
-10.
-Add
+10.Add Country, Date(YEAR) and Date(Month) to the Column tab and Sum(Value) to the Rows tab.
 
+![](img/t-1.png)
+11. Add a filter to seperate the import and export value.
 
+![](img/t-2.png)
+12. Add a filter to choose the range of date.
+
+![](img/t-3.png)
+13. Add another filter to compare difference between countries.
+
+![](img/t-4.png)
+14. Drop Value(in thousand) to the Rows tab, use quick table calculation to get the mongthly growth rate.
+
+![](img/t-5.png)
+
+15.The base graph should look like this.
+
+![](img/t-6.png)
+
+16.Change the title of the chart.
+
+17.Change the month on the x-axis into number to make the graph clearer.
+
+18.Change the name of y-axis.
+
+19.Adjust the size of the picture so that more countries can be seen on the interface under the condition of being able to see clearly.
+
+20.Change the tooltip.
+![](img/t-7.png)
+21. The tooltip will look like below.
+
+![](img/t-8.png)
 # 5.0 Three major observations revealed by the data visualisation prepared
 
 * The export value of Hong Kong and Taiwan is obviously greater than the import value, and there is a trade surplus. The foreign trade of these two countries is in a favorable position. But this may affect a country's currency to some extent.
