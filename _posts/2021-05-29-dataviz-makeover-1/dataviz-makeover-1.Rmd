@@ -1,11 +1,11 @@
 ---
 title: "DataViz Makeover 1"
 description: |
-  A short description of the post.
+  DataViz Makeover 1 for ISSS608: Visual Analytics
 author:
   - name: Tang Huining
     url: https://example.com/norajones
-date: 05-29-2021
+date: 05-30-2021
 output:
   distill::distill_article:
     self_contained: false
@@ -15,85 +15,67 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+# 1.0 Critiques of the graph
 
-# 1.0 Overview
+The original visualisation can be seen below.
+![](img/original.png)
 
-In this article, we will show you how to plot a figure with multiple histograms by using [**ggplot2**](https://ggplot2.tidyverse.org/) and **ggpubr** packages. 
+## 1.1 Clarity
+
+* The mark on the region is not obvious enough, and it is difficult to confirm the name of the country during initial observation.
+* The date on the x-axis is not clear enough to determine the month included in the data. It is hard to know the month that the graph include. Therefore, data information cannot be obtained intuitively.
+* The range of the y-axis is different. In the graph of a certain country, the range of the y-axis is different, so the trade balance cannot be seen. In the same way, in different countries, the y-axis range is also different and it is impossible to intuitively compare the trade differences between different regions.
+* The type of graphic selection. In this figure, the part below the line chart is filled with color, but it is not conducive to observing the overall trend of change.
+
+## 1.2 Aesthetics
+
+* Choice of color and transparency. Although the picture has a certain degree of transparency, it is very inconvenient to observe after the two colors are mixed, especially when the import is greater than the export, the export value is hidden.
+* Different graph size. The six countries shown in this graph have different graph sizes in each country, so it is difficult to explore effective information from this graph.
+* The stacked form of graphics. Due to the large number of countries studied, the six graphs are stacked together in a 2*3 manner, which makes the originally small graphs smaller and more difficult to see subtle changes.
 
 
-# 2.0 Installing and Launching R Packages
-
-Before you get started, you are required:
-
-* to start a new R project, and
-    * to create a new R Markdown document.
-
-Figure below shows the quadrat plot of Tableauu.
-
-![](img/Population.jpg)
+# 2.0 Sketch of the proposed design
 
 
+
+## 2.1 Clarity
 
 Next, you will use the code chunk below to install and launch ggpubr and tidyverse in RStudio.
 
-# R code 
+## 2.2 Aesthetic
 packages = c('ggpubr', 'tidyverse')
 
-for(p in packages){library
-  if(!require(p, character.only = T)){
-    install.packages(p)
-  }
-  library(p, character.only = T)
-}
+
+# 3.0 Proposed Visualisation designed in Tableau
+
+Please view the interactive visualisation on Tableau Public [here](网页)
 
 
-# 3.0 Importing and Preparing The Data Set 
+# 4.0 A step-by-step description of how the data visualization was prepared
 
-In this hands-on exercise, the [Wine Quality Data Set](https://archive.ics.uci.edu/ml/datasets/wine+quality) of UCI Machine Learning Repository will be used.  The data set consists of 13 variables and 6497 observations.  For the purpose of this exercise, we have combined the red wine and white wine data into one data file.  It is called wine_quality and is in csv file format.  
+1. Delete extra values in the original database using excel, change file name into import and export.
+![](img/change-1.png)
 
+2. Import the data into Tableau.Link two charts.
+![](img/change-2.png)
+3. Change data type to number. 
+![](img/change-3.png)
+4. Use Tableau to pivot the data in both sheet. Drop measure values into columns and Measure names and country into rows.
+![](img/change-4.png)
+5. Select all values from 2019 Jan to 2020 Dec from the Import/Export sheet, measure in sum. Delete other extra values.Do this in both sheets.  
+![](img/change-5.png)
+6. View Data and export all data.
+![](img/change-6.png)
+![](img/change-7.png)
+7. Repeat the following steps for both Import and Export sections.Use Microsoft Excel to merge two files, add a new Type column to identify the type.
+![](img/change-8.png)
+8. Import the cleaned dataset into Tableau.Change column name into more clearer one.
+![](img/change-9.png)
+9. Change Date data type into 'Date'.
+![](img/change-10.png)
+10.
+# 5.0 Three major observations revealed by the data visualisation prepared
 
-## 3.1 Importing Data
-
-First, let us import the data into R by using read_csv() of readr package.  
-
-
-# R code
-wine <- read_csv("data/wine_quality.csv")
-
-
-Notice that beside quality and type, the rest of the variables are numerical and continuous data type. 
-
-
-# 4.0 Univariate EDA with Histogram
-
-In the figure below, multiple histograms are plottted by using ggplot() and geom_histogram() of ggplot2 package.  Then, ggarrange() of ggpubr package is used to patch these histogram into a single figure to reveal the distribution of the selected variables in the wine quality data sets.  
-
-# Rcode
-fa <- ggplot(data=wine, aes(x= `fixed acidity`)) +
-  geom_histogram(bins=20, color="black", fill="light blue")
-va <- ggplot(data=wine, aes(x= `volatile acidity`)) +
-  geom_histogram(bins=20, color="black", fill="light blue")
-ca <- ggplot(data=wine, aes(x= `citric acid`)) +
-  geom_histogram(bins=20, color="black", fill="light blue")
-rs <- ggplot(data=wine, aes(x= `residual sugar`)) +
-  geom_histogram(bins=20, color="black", fill="light blue")
-ch <- ggplot(data=wine, aes(x= `chlorides`)) +
-  geom_histogram(bins=20, color="black", fill="light blue")
-fSO2 <- ggplot(data=wine, aes(x= `free sulfur dioxide`)) +
-  geom_histogram(bins=20, color="black", fill="light blue")
-tSO2 <- ggplot(data=wine, aes(x= `total sulfur dioxide`)) +
-  geom_histogram(bins=20, color="black", fill="light blue")
-density <- ggplot(data=wine, aes(x= density)) +
-  geom_histogram(bins=20, color="black", fill="light blue")
-pH <- ggplot(data=wine, aes(x= pH)) +
-  geom_histogram(bins=20, color="black", fill="light blue")
-sulphates <- ggplot(data=wine, aes(x= sulphates)) +
-  geom_histogram(bins=20, color="black", fill="light blue")
-alcohol <- ggplot(data=wine, aes(x= alcohol)) +
-  geom_histogram(bins=20, color="black", fill="light blue")
-
-ggarrange(fa, va, ca, rs, ch, fSO2, tSO2, density, pH, sulphates, alcohol, 
-          ncol = 4, nrow = 3)
 
 
 
