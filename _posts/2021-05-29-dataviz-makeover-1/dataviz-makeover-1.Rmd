@@ -121,6 +121,11 @@ Please view the interactive visualisation on Tableau Public [here](https://publi
 21. The tooltip will look like below.
 
 ![](img/t-8.png)
+21. The final dashboard.
+
+![](img/t-9.png)
+
+
 # 5.0 Three major observations revealed by the data visualisation prepared
 
 * The export value of Hong Kong and Taiwan is obviously greater than the import value, and there is a trade surplus. The foreign trade of these two countries is in a favorable position. But this may affect a country's currency to some extent.
