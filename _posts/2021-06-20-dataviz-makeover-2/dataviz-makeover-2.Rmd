@@ -19,7 +19,8 @@ knitr::opts_chunk$set(echo = FALSE)
 # 1.0 Critiques of the graph
 
 The original visualisation can be seen below.
-![](img/original.jpg)
+![](img/original.png)
+
 
 
 ## 1.1 Clarity
@@ -29,7 +30,7 @@ The original visualisation can be seen below.
 
 ## 1.2 Aesthetics
 
-* **Color**. There are too many colors in the graph. Too many colors can cause confusion. In addition, there are some similar colors. For example, the colors of Mainland China are similar to the background, and the colors of EU and Thailand are indistinguishable.
+* **Color**. There are too many colors and some similar colors in the graph. Too many colors may cause confusion. In addition, there are some similar colors. For example, the colors of Mainland China are similar to the background, and the colors of EU and Thailand are indistinguishable.
 
 
 
