@@ -14,7 +14,7 @@
     "contents": "\r\n1.0 Critiques of the graph\r\nThe original visualisation can be seen below.\r\n\r\n1.1 Clarity\r\nReference line. There is a lack of reference lines. Although we could know which country or region has a larger total amount, we can not tell the details of export and import.\r\n1.2 Aesthetics\r\nColor. Too many colors and some similar colors . Too many colors may cause confusion. In addition, there are some similar colors. For example, the colors of Mainland China are similar to the background, and the colors of EU and Thailand are indistinguishable.\r\nColor.\r\n2.0 Sketch of the proposed design\r\nWith reference to Critic , an alternative representation is sketched below. \r\n2.1 Clarity\r\nColor.\r\n2.2 Aesthetic\r\nColor.\r\n3.0 Proposed Visualisation designed in Tableau\r\nPlease view the interactive visualisation on Tableau Public here\r\n4.0 A step-by-step description of how the data visualization was prepared\r\nNo\r\nStep\r\nAction\r\n1\r\nUse Excel to delete redundant data. As we also consider the Europe Union, keep data from EU countries.There’re 34 country/region left.\r\n\r\n2\r\nAdd missing country of EU to T1 and T2\r\n\r\n3\r\nUse Tableau to import data and connect T1 and T2 with country\r\n\r\n4\r\nPivot the data of all dates in both T1 and T2\r\n\r\n5.0 Three major observations revealed by the data visualisation prepared\r\n\r\n\r\n\r\n",
     "preview": {},
     "last_modified": "2021-06-20T16:06:49+08:00",
-    "input_file": "dataviz-makeover-2.knit.md"
+    "input_file": {}
   },
   {
     "path": "posts/2021-05-29-dataviz-makeover-1/",
