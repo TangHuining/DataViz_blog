@@ -43,12 +43,17 @@ With reference to Critic , an alternative representation is sketched below.
 
 ## 2.1 Clarity
 
-* **Color**.
-
+* **Background**.Make the background of the graph blank.It will be easier and intuitive to observe each data of each country/region.
+* **Geographic graph**.Add geograpic graph to see the location of the countries and regions. We could further explore whether the merchandise trade is related to the location.
+* **Reference line** Add appropriate reference line to directly relate the small part related with the x-axis and y-axis.
+* **Date**.Add the date of year from 2011-2020. We could compare the change of different aspects and explore more.
 
 ## 2.2 Aesthetic
 
-* **Color**.
+* **Color**.Change the color from country/region to the merchandise trade amount.We could tell directly which country has the min/max merchandise trade amount.
+* **Size**.Reduce the size of graphics, avoid graphics overlap and confusion.
+* **Label**.Not always show labels.Leave the country/region name and exclude others. We could find the details as long as click on the graph.
+
 
 # 3.0 Proposed Visualisation designed in Tableau
 
