@@ -11,10 +11,10 @@
     ],
     "date": "2021-06-20",
     "categories": [],
-    "contents": "\r\n1.0 Critiques of the graph\r\nThe original visualisation can be seen below. \r\n1.1 Clarity\r\nColor, Threr are too many colors in the graph. Too many colors can cause confusion. In addition, there are some similar colors. For example, the colors of Mainland China are similar to the background, and the colors of EU and Thailand are indistinguishable.\r\n1.2 Aesthetics\r\nColor, There are too many colors in the graph. Too many colors can cause confusion. In addition, there are some similar colors. For example, the colors of Mainland China are similar to the background, and the colors of EU and Thailand are indistinguishable.\r\n\r\n\r\n\r\n",
+    "contents": "\r\n1.0 Critiques of the graph\r\nThe original visualisation can be seen below. \r\n1.1 Clarity\r\nColor, Threr are too many colors in the graph. Too many colors can cause confusion. In addition, there are some similar colors. For example, the colors of Mainland China are similar to the background, and the colors of EU and Thailand are indistinguishable.\r\n1.2 Aesthetics\r\nColor. There are too many colors in the graph. Too many colors can cause confusion. In addition, there are some similar colors. For example, the colors of Mainland China are similar to the background, and the colors of EU and Thailand are indistinguishable.\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2021-06-20T13:47:23+08:00",
-    "input_file": {}
+    "last_modified": "2021-06-20T13:55:13+08:00",
+    "input_file": "dataviz-makeover-2.knit.md"
   },
   {
     "path": "posts/2021-05-29-dataviz-makeover-1/",
