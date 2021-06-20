@@ -60,14 +60,35 @@ Please view the interactive visualisation on Tableau Public [here](https://publi
 |2|Add missing country of EU to T1 and T2|![](img/step-2.png){width=90%}|
 |3|Use Tableau to import data and connect T1 and T2 with country|![](img/step-3.png){width=90%}|
 |4|Pivot the data of all dates in both T1 and T2|![](img/step-4.png){width=90%}|
-
-
-
-
-
-
-
-
+|5|We got three columns of data. Change the name of each column.|![](img/step-5.png){width=90%}|
+|6|Export both data sites to csv.|![](img/step-6.png){width=90%}|
+|7|Combine the two files.|![](img/step-7.png){width=90%}|
+|8|Import the data into Tableau,change into correct data types.|![](img/step-8.png){width=90%}|
+|9|Custom split the Country/Region column|![](img/step-9.png){width=80%}|
+|10|We got two new column which represent for Country and what the value is in.|![](img/step-10.png){width=80%}|
+|11|Create calculation field to make all value in million but not thousand.Do the same to Export|![](img/step-11.png){width=80%}|
+|12|Hide redundant vales, we got these four columns for further analysis.|![](img/step-12.png){width=90%}|
+|13|Create group of Country/Region to devide country of Europe Union.|![](img/step-13.png){width=80%}|
+|14|Create a group with ten regions and one EU  group.|![](img/step-14.png){width=90%}|
+|15|Create a group with EU countries and one other region group. |![](img/step-15.png){width=90%}|
+|16|Drag Import to columns and export to rows|![](img/step-16.png){width=70%}|
+|17|Drag Country/Region(10 country/region) to details and use filter to exclude EU.|![](img/step-17.png){width=90%}|
+|18|Then our graph looked like this.|![](img/step-18.png){width=90%}|
+|19|Create a new calculation field to calculate the amount of Export minus Import.|![](img/step-19.png){width=90%}|
+|20|Create a new calculation field to calculate the amount of Export plus Import.|![](img/step-20.png){width=90%}|
+|21|Combine the two files.|![](img/step-21.png){width=90%}|
+|22|Combine the two files.|![](img/step-22.png){width=90%}|
+|23|Combine the two files.|![](img/step-23.png){width=90%}|
+|24|Combine the two files.|![](img/step-24.png){width=90%}|
+|25|Combine the two files.|![](img/step-25.png){width=90%}|
+|26|Combine the two files.|![](img/step-26.png){width=90%}|
+|27|Combine the two files.|![](img/step-27.png){width=90%}|
+|28|Combine the two files.|![](img/step-28.png){width=90%}|
+|29|Combine the two files.|![](img/step-29.png){width=90%}|
+|30|Combine the two files.|![](img/step-30.png){width=90%}|
+|31|Combine the two files.|![](img/step-31.png){width=90%}|
+|32|Combine the two files.|![](img/step-32.png){width=90%}|
+|33|Combine the two files.|![](img/step-33.png){width=90%}|
 
 # 5.0 Three major observations revealed by the data visualisation prepared
 
