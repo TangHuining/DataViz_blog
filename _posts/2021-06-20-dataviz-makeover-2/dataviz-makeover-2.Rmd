@@ -26,8 +26,9 @@ The original visualisation can be seen below.
 ## 1.1 Clarity
 
 * **Reference line**. There is a lack of reference lines. Although we could know which country or region has a larger total amount, we can not tell the details of export and import.
-* **Reference line**.
+* **Note**.The note is long and seems not that useful, the size of the word are also a bit small which made it ard to read.
 * **Lack geographic image** We only know the countries or region but we do not have a idea of where the country is whether it is near Singapore or not.
+* **Date** Only shows the total merchandise of 2020. If people want to make a comparison of other years, they could only explore by themselves.
 
 
 ## 1.2 Aesthetics
@@ -51,7 +52,7 @@ With reference to Critic , an alternative representation is sketched below.
 
 # 3.0 Proposed Visualisation designed in Tableau
 
-Please view the interactive visualisation on Tableau Public [here](https://public.tableau.com/app/profile/huining.tang/viz/MerchandiseTrade_16223827330810/Sheet1)
+Please view the interactive visualisation on Tableau Public [here](https://public.tableau.com/app/profile/huining.tang/viz/DataViz-2_16241911265180/Dashboard1)
 
 # 4.0 A step-by-step description of how the data visualization was prepared
 
