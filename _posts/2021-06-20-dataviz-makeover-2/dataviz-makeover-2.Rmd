@@ -22,10 +22,14 @@ The original visualisation can be seen below.
 ![](img/original.jpg)
 
 
+## 1.1 Clarity
+
+* **Color**, Threr are too many colors in the graph. Too many colors can cause confusion. In addition, there are some similar colors. For example, the colors of Mainland China are similar to the background, and the colors of EU and Thailand are indistinguishable.
 
 
+## 1.2 Aesthetics
 
-
+* **Color**, There are too many colors in the graph. Too many colors can cause confusion. In addition, there are some similar colors. For example, the colors of Mainland China are similar to the background, and the colors of EU and Thailand are indistinguishable.
 
 
 
