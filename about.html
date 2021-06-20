@@ -86,39 +86,638 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>DataViz Makeover 2</title>
+  <title>DataViz Makeover: About this blog</title>
 
-  <meta property="description" itemprop="description" content="DataViz Makeover 2 for ISSS608: Visual Analytics."/>
+  <meta property="description" itemprop="description" content="Some additional details about the blog"/>
 
 
-  <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2021-06-20"/>
-  <meta property="article:created" itemprop="dateCreated" content="2021-06-20"/>
-  <meta name="article:author" content="Tang Huining"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="DataViz Makeover 2"/>
+  <meta property="og:title" content="DataViz Makeover: About this blog"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="DataViz Makeover 2 for ISSS608: Visual Analytics."/>
+  <meta property="og:description" content="Some additional details about the blog"/>
   <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="DataViz Makeover"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="DataViz Makeover 2"/>
-  <meta property="twitter:description" content="DataViz Makeover 2 for ISSS608: Visual Analytics."/>
+  <meta property="twitter:title" content="DataViz Makeover: About this blog"/>
+  <meta property="twitter:description" content="Some additional details about the blog"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["DataViz Makeover 2"]},{"type":"character","attributes":{},"value":["DataViz Makeover 2 for ISSS608: Visual Analytics.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Tang Huining"]},{"type":"character","attributes":{},"value":["https://example.com/norajones"]}]}]},{"type":"character","attributes":{},"value":["06-20-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["About this blog"]},{"type":"character","attributes":{},"value":["Some additional details about the blog"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
-  
-  <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["dataviz-makeover-2_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-2_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-2_files/distill-2.2.21/template.v2.js","dataviz-makeover-2_files/header-attrs-2.8/header-attrs.js","dataviz-makeover-2_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-2_files/popper-2.6.0/popper.min.js","dataviz-makeover-2_files/tippy-6.2.7/tippy-bundle.umd.min.js","dataviz-makeover-2_files/tippy-6.2.7/tippy-light-border.css","dataviz-makeover-2_files/tippy-6.2.7/tippy.css","dataviz-makeover-2_files/tippy-6.2.7/tippy.umd.min.js","dataviz-makeover-2_files/webcomponents-2.0.0/webcomponents.js","img/2-2017.png","img/2-2020.png","img/2013.png","img/2014.png","img/2019.png","img/2020.png","img/original.png","img/sketch.jpg","img/step-1.png","img/step-10.png","img/step-11.png","img/step-12.png","img/step-13.png","img/step-14.png","img/step-15.png","img/step-16.png","img/step-17.png","img/step-18.png","img/step-19.png","img/step-2.png","img/step-20.png","img/step-21.png","img/step-22.png","img/step-23.png","img/step-24.png","img/step-25.png","img/step-26.png","img/step-27.png","img/step-28.png","img/step-29.png","img/step-3.png","img/step-30.png","img/step-31.png","img/step-32.png","img/step-33.png","img/step-34.png","img/step-35.png","img/step-36.png","img/step-37.png","img/step-38.png","img/step-39.png","img/step-4.png","img/step-40.png","img/step-41.png","img/step-42.png","img/step-43.png","img/step-44.png","img/step-45.png","img/step-46.png","img/step-47.png","img/step-5.png","img/step-6.png","img/step-7.png","img/step-8.png","img/step-9.png"]}
-  </script>
   <!--radix_placeholder_navigation_in_header-->
+  <meta name="distill:offset" content=""/>
+
+  <script type="application/javascript">
+
+    window.headroom_prevent_pin = false;
+
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+
+      // initialize headroom for banner
+      var header = $('header').get(0);
+      var headerHeight = header.offsetHeight;
+      var headroom = new Headroom(header, {
+        tolerance: 5,
+        onPin : function() {
+          if (window.headroom_prevent_pin) {
+            window.headroom_prevent_pin = false;
+            headroom.unpin();
+          }
+        }
+      });
+      headroom.init();
+      if(window.location.hash)
+        headroom.unpin();
+      $(header).addClass('headroom--transition');
+
+      // offset scroll location for banner on hash change
+      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+      window.addEventListener("hashchange", function(event) {
+        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+      });
+
+      // responsive menu
+      $('.distill-site-header').each(function(i, val) {
+        var topnav = $(this);
+        var toggle = topnav.find('.nav-toggle');
+        toggle.on('click', function() {
+          topnav.toggleClass('responsive');
+        });
+      });
+
+      // nav dropdowns
+      $('.nav-dropbtn').click(function(e) {
+        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+        $(this).parent().siblings('.nav-dropdown')
+           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $("body").click(function(e){
+        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $(".nav-dropdown").click(function(e){
+        e.stopPropagation();
+      });
+    });
+  </script>
+
+  <style type="text/css">
+
+  /* Theme (user-documented overrideables for nav appearance) */
+
+  .distill-site-nav {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #0F2E3D;
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+  .distill-site-nav a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .distill-site-nav a:hover {
+    color: white;
+  }
+
+  @media print {
+    .distill-site-nav {
+      display: none;
+    }
+  }
+
+  .distill-site-header {
+
+  }
+
+  .distill-site-footer {
+
+  }
+
+
+  /* Site Header */
+
+  .distill-site-header {
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 3;
+  }
+
+  .distill-site-header .nav-left {
+    display: inline-block;
+    margin-left: 8px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header .nav-left {
+      margin-left: 0;
+    }
+  }
+
+
+  .distill-site-header .nav-right {
+    float: right;
+    margin-right: 8px;
+  }
+
+  .distill-site-header a,
+  .distill-site-header .title {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 10px 14px 10px;
+  }
+
+  .distill-site-header .title {
+    font-size: 18px;
+    min-width: 150px;
+  }
+
+  .distill-site-header .logo {
+    padding: 0;
+  }
+
+  .distill-site-header .logo img {
+    display: none;
+    max-height: 20px;
+    width: auto;
+    margin-bottom: -4px;
+  }
+
+  .distill-site-header .nav-image img {
+    max-height: 18px;
+    width: auto;
+    display: inline-block;
+    margin-bottom: -3px;
+  }
+
+
+
+  @media screen and (min-width: 1000px) {
+    .distill-site-header .logo img {
+      display: inline-block;
+    }
+    .distill-site-header .nav-left {
+      margin-left: 20px;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 20px;
+    }
+    .distill-site-header .title {
+      padding-left: 12px;
+    }
+  }
+
+
+  .distill-site-header .nav-toggle {
+    display: none;
+  }
+
+  .nav-dropdown {
+    display: inline-block;
+    position: relative;
+  }
+
+  .nav-dropdown .nav-dropbtn {
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 16px 10px;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    margin-top: 1px;
+    z-index: 2;
+  }
+
+  .nav-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    margin-top: 2px;
+    white-space: nowrap;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .nav-dropdown-content hr {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-dropdown-active {
+    display: block;
+  }
+
+  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+    color: black;
+    padding: 6px 24px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .nav-dropdown-content .nav-dropdown-header {
+    display: block;
+    padding: 5px 24px;
+    padding-bottom: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #999999;
+    white-space: nowrap;
+  }
+
+  .nav-dropdown:hover .nav-dropbtn {
+    color: white;
+  }
+
+  .nav-dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .nav-right .nav-dropdown-content {
+    margin-left: -45%;
+    right: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+    .distill-site-header a.nav-toggle {
+      float: right;
+      display: block;
+    }
+    .distill-site-header .title {
+      margin-left: 0;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 0;
+    }
+    .distill-site-header {
+      overflow: hidden;
+    }
+    .nav-right .nav-dropdown-content {
+      margin-left: 0;
+    }
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header.responsive {position: relative; min-height: 500px; }
+    .distill-site-header.responsive a.nav-toggle {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .distill-site-header.responsive a,
+    .distill-site-header.responsive .nav-dropdown {
+      display: block;
+      text-align: left;
+    }
+    .distill-site-header.responsive .nav-left,
+    .distill-site-header.responsive .nav-right {
+      width: 100%;
+    }
+    .distill-site-header.responsive .nav-dropdown {float: none;}
+    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  /* Site Footer */
+
+  .distill-site-footer {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 3;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  /* Headroom */
+
+  d-title {
+    padding-top: 6rem;
+  }
+
+  @media print {
+    d-title {
+      padding-top: 4rem;
+    }
+  }
+
+  .headroom {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .headroom--transition {
+    transition: all .4s ease-in-out;
+  }
+
+  .headroom--unpinned {
+    top: -100px;
+  }
+
+  .headroom--pinned {
+    top: 0;
+  }
+
+  /* adjust viewport for navbar height */
+  /* helps vertically center bootstrap (non-distill) content */
+  .min-vh-100 {
+    min-height: calc(100vh - 100px) !important;
+  }
+
+  </style>
+
+  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
+  <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
+  <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
+
+  <script type="application/javascript">
+
+  function getMeta(metaName) {
+    var metas = document.getElementsByTagName('meta');
+    for (let i = 0; i < metas.length; i++) {
+      if (metas[i].getAttribute('name') === metaName) {
+        return metas[i].getAttribute('content');
+      }
+    }
+    return '';
+  }
+
+  function offsetURL(url) {
+    var offset = getMeta('distill:offset');
+    return offset ? offset + '/' + url : url;
+  }
+
+  function createFuseIndex() {
+
+    // create fuse index
+    var options = {
+      keys: [
+        { name: 'title', weight: 20 },
+        { name: 'categories', weight: 15 },
+        { name: 'description', weight: 10 },
+        { name: 'contents', weight: 5 },
+      ],
+      ignoreLocation: true,
+      threshold: 0
+    };
+    var fuse = new window.Fuse([], options);
+
+    // fetch the main search.json
+    return fetch(offsetURL('search.json'))
+      .then(function(response) {
+        if (response.status == 200) {
+          return response.json().then(function(json) {
+            // index main articles
+            json.articles.forEach(function(article) {
+              fuse.add(article);
+            });
+            // download collections and index their articles
+            return Promise.all(json.collections.map(function(collection) {
+              return fetch(offsetURL(collection)).then(function(response) {
+                if (response.status === 200) {
+                  return response.json().then(function(articles) {
+                    articles.forEach(function(article) {
+                      fuse.add(article);
+                    });
+                  })
+                } else {
+                  return Promise.reject(
+                    new Error('Unexpected status from search index request: ' +
+                              response.status)
+                  );
+                }
+              });
+            })).then(function() {
+              return fuse;
+            });
+          });
+
+        } else {
+          return Promise.reject(
+            new Error('Unexpected status from search index request: ' +
+                        response.status)
+          );
+        }
+      });
+  }
+
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+
+    // get search element (bail if we don't have one)
+    var searchEl = window.document.getElementById('distill-search');
+    if (!searchEl)
+      return;
+
+    createFuseIndex()
+      .then(function(fuse) {
+
+        // make search box visible
+        searchEl.classList.remove('hidden');
+
+        // initialize autocomplete
+        var options = {
+          autoselect: true,
+          hint: false,
+          minLength: 2,
+        };
+        window.autocomplete(searchEl, options, [{
+          source: function(query, callback) {
+            const searchOptions = {
+              isCaseSensitive: false,
+              shouldSort: true,
+              minMatchCharLength: 2,
+              limit: 10,
+            };
+            var results = fuse.search(query, searchOptions);
+            callback(results
+              .map(function(result) { return result.item; })
+            );
+          },
+          templates: {
+            suggestion: function(suggestion) {
+              var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
+                ? `<img src="${offsetURL(suggestion.preview)}"</img>`
+                : '';
+              var html = `
+                <div class="search-item">
+                  <h3>${suggestion.title}</h3>
+                  <div class="search-item-description">
+                    ${suggestion.description || ''}
+                  </div>
+                  <div class="search-item-preview">
+                    ${img}
+                  </div>
+                </div>
+              `;
+              return html;
+            }
+          }
+        }]).on('autocomplete:selected', function(event, suggestion) {
+          window.location.href = offsetURL(suggestion.path);
+        });
+        // remove inline display style on autocompleter (we want to
+        // manage responsive display via css)
+        $('.algolia-autocomplete').css("display", "");
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+
+  });
+
+  </script>
+
+  <style type="text/css">
+
+  .nav-search {
+    font-size: x-small;
+  }
+
+  /* Algolioa Autocomplete */
+
+  .algolia-autocomplete {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: sub;
+    background-color: white;
+    color: black;
+    padding: 6px;
+    padding-top: 8px;
+    padding-bottom: 0;
+    border-radius: 6px;
+    border: 1px #0F2E3D solid;
+    width: 180px;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .distill-site-nav .algolia-autocomplete {
+      display: none;
+      visibility: hidden;
+    }
+    .distill-site-nav.responsive .algolia-autocomplete {
+      display: inline-block;
+      visibility: visible;
+    }
+    .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
+      margin-left: 0;
+      width: 400px;
+      max-height: 400px;
+    }
+  }
+
+  .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+    width: 90%;
+    outline: none;
+    border: none;
+  }
+
+  .algolia-autocomplete .aa-hint {
+    color: #999;
+  }
+  .algolia-autocomplete .aa-dropdown-menu {
+    width: 550px;
+    max-height: 70vh;
+    overflow-x: visible;
+    overflow-y: scroll;
+    padding: 5px;
+    margin-top: 3px;
+    margin-left: -150px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #999;
+    border-top: none;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+    cursor: pointer;
+    padding: 5px 4px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
+    border-bottom: none;
+    margin-bottom: 2px;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
+    overflow: hidden;
+    font-size: 0.8em;
+    line-height: 1.4em;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
+    font-size: 1rem;
+    margin-block-start: 0;
+    margin-block-end: 5px;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
+    display: inline-block;
+    overflow: hidden;
+    height: 2.8em;
+    width: 80%;
+    margin-right: 4%;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
+    display: inline-block;
+    width: 15%;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
+    height: 3em;
+    width: auto;
+    display: none;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
+    display: initial;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+    background-color: #eee;
+  }
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  </style>
+
+
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
 
@@ -1434,16 +2033,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="dataviz-makeover-2_files/header-attrs-2.8/header-attrs.js"></script>
-  <script src="dataviz-makeover-2_files/jquery-1.11.3/jquery.min.js"></script>
-  <script src="dataviz-makeover-2_files/popper-2.6.0/popper.min.js"></script>
-  <link href="dataviz-makeover-2_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
-  <link href="dataviz-makeover-2_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
-  <script src="dataviz-makeover-2_files/tippy-6.2.7/tippy.umd.min.js"></script>
-  <script src="dataviz-makeover-2_files/anchor-4.2.2/anchor.min.js"></script>
-  <script src="dataviz-makeover-2_files/bowser-1.9.3/bowser.min.js"></script>
-  <script src="dataviz-makeover-2_files/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="dataviz-makeover-2_files/distill-2.2.21/template.v2.js"></script>
+  <script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
+  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
+  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
+  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
   <!--/radix_placeholder_site_in_header-->
 
@@ -1455,381 +2053,37 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"DataViz Makeover 2","description":"DataViz Makeover 2 for ISSS608: Visual Analytics.","authors":[{"author":"Tang Huining","authorURL":"https://example.com/norajones","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-06-20T00:00:00.000+08:00","citationText":"Huining, 2021"}
+{"title":"About this blog","description":"Some additional details about the blog","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
+<header class="header header--fixed" role="banner">
+<nav class="distill-site-nav distill-site-header">
+<div class="nav-left">
+<a href="index.html" class="title">DataViz Makeover</a>
+<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
+</div>
+<div class="nav-right">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+</div>
+</nav>
+</header>
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>DataViz Makeover 2</h1>
+<h1>About this blog</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>DataViz Makeover 2 for ISSS608: Visual Analytics.</p></p>
+<p><p>Some additional details about the blog</p></p>
 </div>
 
-<div class="d-byline">
-  Tang Huining <a href="https://example.com/norajones" class="uri">https://example.com/norajones</a> 
-  
-<br/>06-20-2021
-</div>
 
 <div class="d-article">
-<ul>
-<li><a href="#10-critiques-of-the-graph">1.0 Critiques of the graph</a>
-<ul>
-<li><a href="#11-clarity">1.1 Clarity</a></li>
-<li><a href="#12-aesthetics">1.2 Aesthetics</a></li>
-</ul></li>
-<li><a href="#20-sketch-of-the-proposed-design">2.0 Sketch of the proposed design</a>
-<ul>
-<li><a href="#21-clarity">2.1 Clarity</a></li>
-<li><a href="#22-aesthetic">2.2 Aesthetic</a></li>
-</ul></li>
-<li><a href="#30-proposed-visualisation-designed-in-tableau">3.0 Proposed Visualisation designed in Tableau</a></li>
-<li><a href="#40-a-step-by-step-description-of-how-the-data-visualization-was-prepared">4.0 A step-by-step description of how the data visualization was prepared</a></li>
-<li><a href="#50-three-major-observations-revealed-by-the-data-visualisation-prepared">5.0 Three major observations revealed by the data visualisation prepared</a></li>
-</ul>
-<h1 id="critiques-of-the-graph">1.0 Critiques of the graph</h1>
-<p>The original visualisation can be seen below.</p>
-<p><img src="img/original.png" style="width:50.0%" /></p>
-<h2 id="clarity">1.1 Clarity</h2>
-<ul>
-<li><strong>Reference line</strong>. There is a lack of reference lines. Although we could know which country or region has a larger total amount, we can not tell the details of export and import.</li>
-<li><strong>Note</strong>.The note is long and seems not that useful, the size of the word are also a bit small which made it ard to read.</li>
-<li><strong>Lack geographic image</strong> We only know the countries or region but we do not have a idea of where the country is whether it is near Singapore or not.</li>
-<li><strong>Date</strong> Only shows the total merchandise of 2020. If people want to make a comparison of other years, they could only explore by themselves.</li>
-</ul>
-<h2 id="aesthetics">1.2 Aesthetics</h2>
-<ul>
-<li><strong>Color</strong>. Too many colors and some similar colors . Too many colors may cause confusion. In addition, there are some similar colors. For example, the colors of Mainland China are similar to the background, and the colors of EU and Thailand are indistinguishable.</li>
-<li><strong>Graphic size</strong>. The circles corresponding to each country are too large and overlap each other, making it impossible to visually observe and compare them.</li>
-<li><strong>Label</strong>. The Labels gives details about country/region and the amount.But as it always shows on the graph, which made the graph disorganized.</li>
-</ul>
-<h1 id="sketch-of-the-proposed-design">2.0 Sketch of the proposed design</h1>
-<p>With reference to Critic , an alternative representation is sketched below. <img src="img/sketch.jpg" /></p>
-<h2 id="clarity-1">2.1 Clarity</h2>
-<ul>
-<li><strong>Background</strong>.Make the background of the graph blank.It will be easier and intuitive to observe each data of each country/region.</li>
-<li><strong>Geographic graph</strong>.Add geograpic graph to see the location of the countries and regions. We could further explore whether the merchandise trade is related to the location.</li>
-<li><strong>Reference line</strong> Add appropriate reference line to directly relate the small part related with the x-axis and y-axis.</li>
-<li><strong>Date</strong>.Add the date of year from 2011-2020. We could compare the change of different aspects and explore more.</li>
-</ul>
-<h2 id="aesthetic">2.2 Aesthetic</h2>
-<ul>
-<li><strong>Color</strong>.Change the color from country/region to the merchandise trade amount.We could tell directly which country has the min/max merchandise trade amount.</li>
-<li><strong>Size</strong>.Reduce the size of graphics, avoid graphics overlap and confusion.</li>
-<li><strong>Label</strong>.Not always show labels.Leave the country/region name and exclude others. We could find the details as long as click on the graph.</li>
-</ul>
-<h1 id="proposed-visualisation-designed-in-tableau">3.0 Proposed Visualisation designed in Tableau</h1>
-<p>Please view the interactive visualisation on Tableau Public <a href="https://public.tableau.com/app/profile/huining.tang/viz/DataViz-2_16241911265180/Dashboard1">here</a></p>
-<h1 id="a-step-by-step-description-of-how-the-data-visualization-was-prepared">4.0 A step-by-step description of how the data visualization was prepared</h1>
-<table>
-<colgroup>
-<col style="width: 9%" />
-<col style="width: 18%" />
-<col style="width: 71%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">No</th>
-<th style="text-align: center;">Step</th>
-<th style="text-align: center;">Action</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">Use Excel to delete redundant data. As we also consider the Europe Union, keep data from EU countries.There’re 34 country/region left.</td>
-<td style="text-align: center;"><img src="img/step-1.png" style="width:90.0%" /></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">Add missing country of EU to T1 and T2</td>
-<td style="text-align: center;"><img src="img/step-2.png" style="width:90.0%" /></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">Use Tableau to import data and connect T1 and T2 with country</td>
-<td style="text-align: center;"><img src="img/step-3.png" style="width:90.0%" /></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">Pivot the data of all dates in both T1 and T2</td>
-<td style="text-align: center;"><img src="img/step-4.png" style="width:90.0%" /></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">We got three columns of data. Change the name of each column.</td>
-<td style="text-align: center;"><img src="img/step-5.png" style="width:90.0%" /></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">Export both data sites to csv.</td>
-<td style="text-align: center;"><img src="img/step-6.png" style="width:90.0%" /></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">Combine the two files.</td>
-<td style="text-align: center;"><img src="img/step-7.png" style="width:90.0%" /></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">Import the data into Tableau,change into correct data types.</td>
-<td style="text-align: center;"><img src="img/step-8.png" style="width:90.0%" /></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">9</td>
-<td style="text-align: center;">Custom split the Country/Region column</td>
-<td style="text-align: center;"><img src="img/step-9.png" style="width:80.0%" /></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">10</td>
-<td style="text-align: center;">We got two new column which represent for Country and what the value is in.</td>
-<td style="text-align: center;"><img src="img/step-10.png" style="width:80.0%" /></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">11</td>
-<td style="text-align: center;">Create calculation field to make all value in million but not thousand.Do the same to Export</td>
-<td style="text-align: center;"><img src="img/step-11.png" style="width:80.0%" /></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">12</td>
-<td style="text-align: center;">Hide redundant vales, we got these four columns for further analysis.</td>
-<td style="text-align: center;"><img src="img/step-12.png" style="width:90.0%" /></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">13</td>
-<td style="text-align: center;">Create group of Country/Region to devide country of Europe Union.</td>
-<td style="text-align: center;"><img src="img/step-13.png" style="width:80.0%" /></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">14</td>
-<td style="text-align: center;">Create a group with ten regions and one EU group.</td>
-<td style="text-align: center;"><img src="img/step-14.png" style="width:90.0%" /></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">15</td>
-<td style="text-align: center;">Create a group with EU countries and one other region group.</td>
-<td style="text-align: center;"><img src="img/step-15.png" style="width:90.0%" /></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">16</td>
-<td style="text-align: center;">Drag Import to columns and export to rows</td>
-<td style="text-align: center;"><img src="img/step-16.png" style="width:70.0%" /></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">17</td>
-<td style="text-align: center;">Drag Country/Region(10 country/region) to details and use filter to exclude EU.</td>
-<td style="text-align: center;"><img src="img/step-17.png" style="width:90.0%" /></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">18</td>
-<td style="text-align: center;">Then our graph looked like this.</td>
-<td style="text-align: center;"><img src="img/step-18.png" style="width:90.0%" /></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">19</td>
-<td style="text-align: center;">Create a new calculation field to calculate the amount of Export minus Import.</td>
-<td style="text-align: center;"><img src="img/step-19.png" style="width:90.0%" /></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">20</td>
-<td style="text-align: center;">Create a new calculation field to calculate the amount of Export plus Import.</td>
-<td style="text-align: center;"><img src="img/step-20.png" style="width:90.0%" /></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">21</td>
-<td style="text-align: center;">Drop Export+Import to Size.</td>
-<td style="text-align: center;"><img src="img/step-21.png" style="width:30.0%" /></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">22</td>
-<td style="text-align: center;">Change the size.</td>
-<td style="text-align: center;"><img src="img/step-22.png" style="width:50.0%" /></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">23</td>
-<td style="text-align: center;">Change the shape to circle</td>
-<td style="text-align: center;"><img src="img/step-23.png" style="width:30.0%" /></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">24</td>
-<td style="text-align: center;">Edit color.</td>
-<td style="text-align: center;"><img src="img/step-24.png" style="width:50.0%" /></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">25</td>
-<td style="text-align: center;">Change opacity to 60%.</td>
-<td style="text-align: center;"><img src="img/step-25.png" style="width:30.0%" /></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">26</td>
-<td style="text-align: center;">Show drop lines.</td>
-<td style="text-align: center;"><img src="img/step-26.png" style="width:50.0%" /></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">27</td>
-<td style="text-align: center;">Drag Country/Region(10 country/region) to label and custom the format.</td>
-<td style="text-align: center;"><img src="img/step-27.png" style="width:50.0%" /></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">28</td>
-<td style="text-align: center;">Add new calculation to determine Trade deficit.</td>
-<td style="text-align: center;"><img src="img/step-28.png" style="width:70.0%" /></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">29</td>
-<td style="text-align: center;">Add new calculation to determine Trade surplus.</td>
-<td style="text-align: center;"><img src="img/step-29.png" style="width:70.0%" /></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">30</td>
-<td style="text-align: center;">Drag Trade deficit and Trade surplus to detail.</td>
-<td style="text-align: center;"><img src="img/step-30.png" style="width:70.0%" /></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">31</td>
-<td style="text-align: center;">Change tool tip like this.</td>
-<td style="text-align: center;"><img src="img/step-31.png" style="width:90.0%" /></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">32</td>
-<td style="text-align: center;">Add median rference line on both x-axis and y-axis</td>
-<td style="text-align: center;"><img src="img/step-32.png" style="width:40.0%" /></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">33</td>
-<td style="text-align: center;">Open another sheet. Drag Latitude and Longitude to Column and row.</td>
-<td style="text-align: center;"><img src="img/step-33.png" style="width:70.0%" /></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">34</td>
-<td style="text-align: center;">Drag Country/Region(10 country/region) to Filter.</td>
-<td style="text-align: center;"><img src="img/step-34.png" style="width:50.0%" /></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">35</td>
-<td style="text-align: center;">Drag Country/Region(10 country/region)，Trade deficit and Trade surplus to detail，</td>
-<td style="text-align: center;"><img src="img/step-35.png" style="width:50.0%" /></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">36</td>
-<td style="text-align: center;">Select light background map.</td>
-<td style="text-align: center;"><img src="img/step-36.png" style="width:50.0%" /></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">37</td>
-<td style="text-align: center;">Drag Country/Region(10 country/region) to label and set as selected to show the country name when click on it.</td>
-<td style="text-align: center;"><img src="img/step-37.png" style="width:40.0%" /></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">38</td>
-<td style="text-align: center;">Change tool tip like this.</td>
-<td style="text-align: center;"><img src="img/step-38.png" style="width:80.0%" /></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">39</td>
-<td style="text-align: center;">Edit Color</td>
-<td style="text-align: center;"><img src="img/step-39.png" style="width:70.0%" /></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">40</td>
-<td style="text-align: center;">Create new sheet, Drag Latitude and Longitude to Column and row.</td>
-<td style="text-align: center;"><img src="img/step-40.png" style="width:80.0%" /></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">41</td>
-<td style="text-align: center;">Drag country/Region(EU) to filter and exclude other countries.</td>
-<td style="text-align: center;"><img src="img/step-41.png" style="width:50.0%" /></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">42</td>
-<td style="text-align: center;">Do almost the same drags as in the last sheet</td>
-<td style="text-align: center;"><img src="img/step-42.png" style="width:50.0%" /></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">43</td>
-<td style="text-align: center;">Change the label.</td>
-<td style="text-align: center;"><img src="img/step-43.png" style="width:40.0%" /></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">44</td>
-<td style="text-align: center;">Edit the color.</td>
-<td style="text-align: center;"><img src="img/step-44.png" style="width:60.0%" /></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">45</td>
-<td style="text-align: center;">Create a dashboard and combine three graphs reasonably.</td>
-<td style="text-align: center;"><img src="img/step-45.png" style="width:50.0%" /></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">46</td>
-<td style="text-align: center;">Edit all titles.</td>
-<td style="text-align: center;"><img src="img/step-46.png" style="width:90.0%" /></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">47</td>
-<td style="text-align: center;">Apply date filter to all using related data sources.</td>
-<td style="text-align: center;"><img src="img/step-47.png" style="width:80.0%" /></td>
-</tr>
-</tbody>
-</table>
-<h1 id="three-major-observations-revealed-by-the-data-visualisation-prepared">5.0 Three major observations revealed by the data visualisation prepared</h1>
-<ul>
-<li>In these ten countries/regions.Tailand had the lowest merchandise amount during the ten years. However, before 2014, Malaysia’s total merchandise transaction volume is the highest. However, after 2014, the total volume of commodity transactions between China and Singapore gradually exceeded that of Malaysia.China has become the most valuable commodity trading partner.In addition, Malaysia’s total merchandise trade in 2020 has dropped significantly, which may be related to the COVID-19 epidemic.</li>
-</ul>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Year</th>
-<th style="text-align: center;">Merchandise Performance</th>
-<th style="text-align: center;">Year</th>
-<th style="text-align: center;">Merchandise Performance</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">2013</td>
-<td style="text-align: center;"><img src="img/2013.png" style="width:90.0%" /></td>
-<td style="text-align: center;">2019</td>
-<td style="text-align: center;"><img src="img/2019.png" style="width:90.0%" /></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">2014</td>
-<td style="text-align: center;"><img src="img/2014.png" style="width:90.0%" /></td>
-<td style="text-align: center;">2020</td>
-<td style="text-align: center;"><img src="img/2020.png" style="width:90.0%" /></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>In general, four regions’ export exceeds import.They are China, Thailand, Indonesia and Malaysia.The Europe Union always has the largest amount of tet import value. This may be related to te business partern of different countries.As we see, the situation are consist until 2020, we assume it is because the breakout of Covid-19.We took 2017 and 2020 as an example to compare the difference.Malaysia and United States changed most.</li>
-</ul>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Year</th>
-<th style="text-align: center;">Export-Import</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">2017</td>
-<td style="text-align: center;"><img src="img/2-2017.png" style="width:90.0%" /></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">2020</td>
-<td style="text-align: center;"><img src="img/2-2020.png" style="width:90.0%" /></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>As for Europe, almost all countries has a positive net import value.However, only two countries, Belgium and Netherlands always has a negative net import value. Both of these countries are the top ten exporters in the world. The Netherlands mainly exports dairy products and crops, while Belgium mainly exports diamonds and chemical products.</li>
-</ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

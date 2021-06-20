@@ -54,6 +54,7 @@ The original visualisation can be seen below.
 With reference to Critic , an alternative representation is sketched below.
 ![](img/sketch.jpg)
 
+
 ## 2.1 Clarity
 
 * **Background**.Make the background of the graph blank.It will be easier and intuitive to observe each data of each country/region.
@@ -75,7 +76,7 @@ Please view the interactive visualisation on Tableau Public [here](https://publi
 # 4.0 A step-by-step description of how the data visualization was prepared
 
 |No     |Step         |Action|
-|:-----:|:------------:|:----------------------------------------------------:|
+|:-----:|:------------:|:---------------------------------------------------:|
 |1|Use Excel to delete redundant data. As we also consider the Europe Union, keep data from EU countries.There're 34 country/region left.|![](img/step-1.png){width=90%}|
 |2|Add missing country of EU to T1 and T2|![](img/step-2.png){width=90%}|
 |3|Use Tableau to import data and connect T1 and T2 with country|![](img/step-3.png){width=90%}|
@@ -127,7 +128,20 @@ Please view the interactive visualisation on Tableau Public [here](https://publi
 
 # 5.0 Three major observations revealed by the data visualisation prepared
 
+* In these ten countries/regions.Tailand had the lowest merchandise amount during the ten years. However, before 2014, Malaysia’s total merchandise transaction volume is the highest. However, after 2014, the total volume of commodity transactions between China and Singapore gradually exceeded that of Malaysia.China has become the most valuable commodity trading partner.In addition, Malaysia’s total merchandise trade in 2020 has dropped significantly, which may be related to the COVID-19 epidemic.
 
+|Year   |Merchandise Performance|Year   |Merchandise Performance|
+|:-----:|:--------------------------:|:-----:|:--------------------------:|
+|2013|![](img/2013.png){width=90%}|2019|![](img/2019.png){width=90%}|
+|2014|![](img/2014.png){width=90%}|2020|![](img/2020.png){width=90%}|
+
+* In general, four regions' export exceeds import.They are China, Thailand, Indonesia and Malaysia.The Europe Union always has the largest amount of tet import value. This may be related to te business partern of different countries.As we see, the situation are consist until 2020, we assume it is because the breakout of Covid-19.We took 2017 and 2020 as an example to compare the difference.Malaysia and United States changed most.
+
+|Year   |Export-Import|
+|:-----:|:---------------------------------------------------------:|
+|2017|![](img/2-2017.png){width=90%}|
+|2020|![](img/2-2020.png){width=90%}|
+* As for Europe, almost all countries has a positive net import value.However, only two countries, Belgium and Netherlands always has a negative net import value. Both of these countries are the top ten exporters in the world. The Netherlands mainly exports dairy products and crops, while Belgium mainly exports diamonds and chemical products.
 
 
 
