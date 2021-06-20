@@ -16,6 +16,19 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+- [1.0 Critiques of the graph](#10-critiques-of-the-graph)
+  * [1.1 Clarity](#11-clarity)
+  * [1.2 Aesthetics](#12-aesthetics)
+- [2.0 Sketch of the proposed design](#20-sketch-of-the-proposed-design)
+  * [2.1 Clarity](#21-clarity)
+  * [2.2 Aesthetic](#22-aesthetic)
+- [3.0 Proposed Visualisation designed in Tableau](#30-proposed-visualisation-designed-in-tableau)
+- [4.0 A step-by-step description of how the data visualization was prepared](#40-a-step-by-step-description-of-how-the-data-visualization-was-prepared)
+- [5.0 Three major observations revealed by the data visualisation prepared](#50-three-major-observations-revealed-by-the-data-visualisation-prepared)
+
+
+
+
 # 1.0 Critiques of the graph
 
 The original visualisation can be seen below.
