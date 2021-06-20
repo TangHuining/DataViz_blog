@@ -76,19 +76,34 @@ Please view the interactive visualisation on Tableau Public [here](https://publi
 |18|Then our graph looked like this.|![](img/step-18.png){width=90%}|
 |19|Create a new calculation field to calculate the amount of Export minus Import.|![](img/step-19.png){width=90%}|
 |20|Create a new calculation field to calculate the amount of Export plus Import.|![](img/step-20.png){width=90%}|
-|21|Combine the two files.|![](img/step-21.png){width=90%}|
-|22|Combine the two files.|![](img/step-22.png){width=90%}|
-|23|Combine the two files.|![](img/step-23.png){width=90%}|
-|24|Combine the two files.|![](img/step-24.png){width=90%}|
-|25|Combine the two files.|![](img/step-25.png){width=90%}|
-|26|Combine the two files.|![](img/step-26.png){width=90%}|
-|27|Combine the two files.|![](img/step-27.png){width=90%}|
-|28|Combine the two files.|![](img/step-28.png){width=90%}|
-|29|Combine the two files.|![](img/step-29.png){width=90%}|
-|30|Combine the two files.|![](img/step-30.png){width=90%}|
-|31|Combine the two files.|![](img/step-31.png){width=90%}|
-|32|Combine the two files.|![](img/step-32.png){width=90%}|
-|33|Combine the two files.|![](img/step-33.png){width=90%}|
+|21|Drop Export+Import to Size.|![](img/step-21.png){width=30%}|
+|22|Change the size.|![](img/step-22.png){width=50%}|
+|23|Change the shape to circle|![](img/step-23.png){width=30%}|
+|24|Edit color.|![](img/step-24.png){width=50%}|
+|25|Change opacity to 60%.|![](img/step-25.png){width=30%}|
+|26|Show drop lines.|![](img/step-26.png){width=50%}|
+|27|Drag Country/Region(10 country/region) to label and custom the format.|![](img/step-27.png){width=50%}|
+|28|Add new calculation to determine Trade deficit.|![](img/step-28.png){width=70%}|
+|29|Add new calculation to determine Trade surplus.|![](img/step-29.png){width=70%}|
+|30|Drag Trade deficit and Trade surplus to detail. |![](img/step-30.png){width=70%}|
+|31|Change tool tip like this.|![](img/step-31.png){width=90%}|
+|32|Add median rference line on both x-axis and y-axis|![](img/step-32.png){width=40%}|
+|33|Open another sheet. Drag Latitude and Longitude to Column and row.|![](img/step-33.png){width=70%}|
+|34|Drag Country/Region(10 country/region) to Filter.|![](img/step-34.png){width=50%}|
+|35|Drag Country/Region(10 country/region)，Trade deficit and Trade surplus to detail，|![](img/step-35.png){width=50%}|
+|36|Select light background map.|![](img/step-36.png){width=50%}|
+|37|Drag Country/Region(10 country/region) to label and set as selected to show the country name when click on it.|![](img/step-37.png){width=40%}|
+|38|Change tool tip like this.|![](img/step-38.png){width=80%}|
+|39|Edit Color|![](img/step-39.png){width=70%}|
+|40|Create new sheet, Drag Latitude and Longitude to Column and row.|![](img/step-40.png){width=80%}|
+|41|Drag country/Region(EU) to filter and exclude other countries.|![](img/step-41.png){width=50%}|
+|42|Do almost the same drags as in the last sheet|![](img/step-42.png){width=50%}|
+|43|Change the label.|![](img/step-43.png){width=40%}|
+|44|Edit the color.|![](img/step-44.png){width=60%}|
+|45|Create a dashboard and combine three graphs reasonably.|![](img/step-45.png){width=50%}|
+|46|Edit all titles.|![](img/step-46.png){width=90%}|
+|47|Apply date filter to all using related data sources.|![](img/step-47.png){width=80%}|
+
 
 # 5.0 Three major observations revealed by the data visualisation prepared
 
