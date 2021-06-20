@@ -1,7 +1,7 @@
 ---
 title: "DataViz Makeover 2"
 description: |
-   DataViz Makeover 1 for ISSS608: Visual Analytics.
+   DataViz Makeover 2 for ISSS608: Visual Analytics.
 author:
   - name: Tang Huining
     url: https://example.com/norajones
@@ -25,12 +25,56 @@ The original visualisation can be seen below.
 
 ## 1.1 Clarity
 
-* **Color**, Threr are too many colors in the graph. Too many colors can cause confusion. In addition, there are some similar colors. For example, the colors of Mainland China are similar to the background, and the colors of EU and Thailand are indistinguishable.
+* **Reference line**. There is a lack of reference lines. Although we could know which country or region has a larger total amount, we can not tell the details of export and import.
+
 
 
 ## 1.2 Aesthetics
 
-* **Color**. There are too many colors and some similar colors in the graph. Too many colors may cause confusion. In addition, there are some similar colors. For example, the colors of Mainland China are similar to the background, and the colors of EU and Thailand are indistinguishable.
+* **Color**. Too many colors and some similar colors . Too many colors may cause confusion. In addition, there are some similar colors. For example, the colors of Mainland China are similar to the background, and the colors of EU and Thailand are indistinguishable.
+* **Color**.
+
+
+# 2.0 Sketch of the proposed design
+With reference to Critic , an alternative representation is sketched below.
+![](img/sketch.jpg)
+
+## 2.1 Clarity
+
+* **Color**.
+
+
+## 2.2 Aesthetic
+
+* **Color**.
+
+# 3.0 Proposed Visualisation designed in Tableau
+
+Please view the interactive visualisation on Tableau Public [here](https://public.tableau.com/app/profile/huining.tang/viz/MerchandiseTrade_16223827330810/Sheet1)
+
+# 4.0 A step-by-step description of how the data visualization was prepared
+
+|No     |Step         |Action|
+|:-----:|:------------:|:----------------------------------------------------:|
+|1|Use Excel to delete redundant data. As we also consider the Europe Union, keep data from EU countries.There're 34 country/region left.|![](img/step-1.png){width=90%}|
+|2|Add missing country of EU to T1 and T2|![](img/step-2.png){width=90%}|
+|3|Use Tableau to import data and connect T1 and T2 with country|![](img/step-3.png){width=90%}|
+|4|Pivot the data of all dates in both T1 and T2|![](img/step-4.png){width=90%}|
+
+
+
+
+
+
+
+
+
+# 5.0 Three major observations revealed by the data visualisation prepared
+
+
+
+
+
 
 
 
