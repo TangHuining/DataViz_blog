@@ -26,14 +26,15 @@ The original visualisation can be seen below.
 ## 1.1 Clarity
 
 * **Reference line**. There is a lack of reference lines. Although we could know which country or region has a larger total amount, we can not tell the details of export and import.
-
+* **Reference line**.
+* **Lack geographic image** We only know the countries or region but we do not have a idea of where the country is whether it is near Singapore or not.
 
 
 ## 1.2 Aesthetics
 
 * **Color**. Too many colors and some similar colors . Too many colors may cause confusion. In addition, there are some similar colors. For example, the colors of Mainland China are similar to the background, and the colors of EU and Thailand are indistinguishable.
-* **Color**.
-
+* **Graphic size**. The circles corresponding to each country are too large and overlap each other, making it impossible to visually observe and compare them.
+* **Label**. The Labels gives details about country/region and the amount.But as it always shows on the graph, which made the graph disorganized. 
 
 # 2.0 Sketch of the proposed design
 With reference to Critic , an alternative representation is sketched below.
