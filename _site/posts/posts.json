@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-06-20-dataviz-makeover-2/",
+    "title": "DataViz Makeover 2",
+    "description": "DataViz Makeover 1 for ISSS608: Visual Analytics.",
+    "author": [
+      {
+        "name": "Tang Huining",
+        "url": "https://example.com/norajones"
+      }
+    ],
+    "date": "2021-06-20",
+    "categories": [],
+    "contents": "\r\n1.0 Critiques of the graph\r\nThe original visualisation can be seen below. \r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2021-06-20T13:18:52+08:00",
+    "input_file": "dataviz-makeover-2.knit.md"
+  },
+  {
     "path": "posts/2021-05-29-dataviz-makeover-1/",
     "title": "DataViz Makeover 1",
     "description": "DataViz Makeover 1 for ISSS608: Visual Analytics",

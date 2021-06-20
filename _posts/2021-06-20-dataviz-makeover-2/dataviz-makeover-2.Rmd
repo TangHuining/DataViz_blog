@@ -1,7 +1,7 @@
 ---
 title: "DataViz Makeover 2"
 description: |
-  A short description of the post.
+   DataViz Makeover 1 for ISSS608: Visual Analytics.
 author:
   - name: Tang Huining
     url: https://example.com/norajones
@@ -16,8 +16,16 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+# 1.0 Critiques of the graph
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+The original visualisation can be seen below.
+![](img/original.jpg)
+
+
+
+
+
+
+
 
 
