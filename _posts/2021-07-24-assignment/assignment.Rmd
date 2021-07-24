@@ -11,13 +11,23 @@ output:
     self_contained: false
 ---
 
-## S
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+```{r setup, include=FALSE}
+packages = c('ggiraph', 'plotly', 
+             'DT', 'patchwork',
+             'tidyverse')
+for (p in packages){
+  if(!require(p, character.only = T)){
+    install.packages(p)
+  }
+  library(p,character.only = T)
+}
+```
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+# 1.0 Critiques of the graph
 
 

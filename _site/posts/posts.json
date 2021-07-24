@@ -9,11 +9,11 @@
         "url": "https://example.com/norajones"
       }
     ],
-    "date": "2021-07-24",
+    "date": "2021-07-25",
     "categories": [],
-    "contents": "\r\nDistill is a publication format for scientific and technical writing, native to the web.\r\nLearn more about using Distill at https://rstudio.github.io/distill.\r\n\r\n\r\n\r\n",
+    "contents": "\r\nS\r\nDistill is a publication format for scientific and technical writing, native to the web.\r\nLearn more about using Distill at https://rstudio.github.io/distill.\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2021-07-24T20:46:53+08:00",
+    "last_modified": "2021-07-24T21:22:49+08:00",
     "input_file": "assignment.knit.md"
   },
   {
