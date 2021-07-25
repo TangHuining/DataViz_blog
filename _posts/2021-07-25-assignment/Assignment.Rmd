@@ -16,8 +16,30 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+# 1.Introduction
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+Sociodemographic, spatial, and temporal are the three key types of information used to analyze crime data. Crime is a complex event which requires a law, an offender, and a target to intersect in a place at one time, which means that crimes may spatially cluster because the offenders might have invested their time and energy to master the “battleground,” or there might be more susceptible targets. Finding these spatial crime clusters would help the purpose to aid criminal apprehension, crime reduction, prevention, and evaluation. 
+The driving record of the suspect has always been an important clue to most criminal cases. Through the analysis of the movement of individual people, we can find the suspect's regular route and regular schedule which is the key in understanding patterns of their movements. 
 
+# 2.Problem Statement
 
+During the celebration of GAStech's IPO, several employees of the company were strangely missing. Fortunately, Many of the Abila, Kronos-based employees of GAStech have company cars which are approved for both personal and business use. These cars are equipped with GPS tracking devices, which can provide tracking data for two weeks before the disappearance (no data on the day of disappearance). Credit card and loyalty card transactions data are also provided for case investigation.
+Taking the GPS monitoring results of the company's employees as a whole can help us understand whether the company has organized group activities at a specific time, such as company team building or overtime, which leads to unexpected group behavior. This helps the police find out the suspect’s unusual travel time and destination. As for the credit card and loyalty card consumption records can help us find out whether the suspect has suspiciously large expenditures, and investigate whether it is possible to purchase suspicious items as criminal tools of crime through the location and name of business of the purchased items.
+
+## 3.Lecture Review
+There is an increasing trend of usage of line plots, geographic maps, heat maps, histograms, and graphs for time series data. Below is the lecture review of several examples of interactive visual analysis available.
+
+## 3.1 Regional Map
+Regional map can be used to analyze data by region, reflecting the basic natural and economic conditions and regional characteristics of a certain region. The most common example is the administrative area map, which can realize the level-by-level drilling from the province to the city and realize the different degrees of color and label for a certain characteristic. For example, the sales in the figure below can be drilled from province to city. The larger the sales, the darker the color.
+
+## 3.2 Heatmap
+The heatmap is used to convert data into color tones within the geographic coordinate system, and intuitively reflect the distribution, frequency or density of the data in the geographic space through the degree of color change. The following figure shows the level of PM2.5 in environmental monitoring in various regions of the country.
+
+## 3.3 Bubble Map
+Bubble map is a very common visualization map related to geographic location information. It can transmit multi-dimensional information at the same time. The location of the bubble is used to transmit physical location information. The size of the bubble indicates the value of variable 1, and the color of the bubble can be identified. The size/category of variable 2 can be produced as a .gif with a time frame to represent the change of each variable over time.
+
+## 3.4 Flow Map
+The flow map displays information or the movement of objects from one location to another and the number of objects on the map. Usually used to display migration data of people, animals, and products. The scale or number of movements represented by a single flow line is represented by its thickness, which helps to show the geographical distribution of migration activities. The flow map is mostly used in scenarios such as interregional trade, traffic flow, population migration, shopping and consumption behavior, communication information flow, and aviation routes. It can also be applied to enterprise cargo transportation and supply chain management. The movement path of the migrants during the Spring Festival is shown in the following figure.
+
+## 3.5 Trajectory graph
+Different lines can be identified by different colors, and the size of the line thickness is used to indicate the size of the passenger flow. The thicker the line, the greater the passenger flow, and it can also indicate the direction of the track line. Operators can use this visualization effect to intuitively judge the distribution of passenger flow in a certain period of time and the ride behavior of different routes in order to arrange operations reasonably.
