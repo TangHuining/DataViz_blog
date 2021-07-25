@@ -126,8 +126,16 @@ ggplot(GroupBytime, aes(date, hour)) +
 
 ## 4.2 Insights after adding vehicle data
 ```{r eval=TRUE, echo=TRUE}
-bgmap<-raster("data/MC2-tourist.jpg")
+bgmap<-raster("data/MC2-tourist.tif")
 ```
+
+```{r eval=TRUE, echo=TRUE}
+tmap_mode("plot")
+tm_shape(bgmap) +
+    tm_raster(bgmap,
+              legend.show = FALSE)
+```
+
 
 ```{r eval=TRUE, echo=TRUE}
 tm_shape(bgmap) +
@@ -161,7 +169,6 @@ gps_sf <- st_as_sf(credit_gps_join,
                    coords = c("long", "lat"),
                        crs= 4326)
 ```
-
 
 
 ```{r eval=TRUE, echo=TRUE}
