@@ -1,0 +1,173 @@
+---
+title: "Assignment"
+author: "TangHuining"
+date: "7/25/2021"
+output: html_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+packages = c("tidyverse","tibble","ggiraph","sf","ggplot2","ggspatial","dplyr",
+             "raster","tmap","clock")
+for (p in packages){
+  if (!require(p,character.only = T)){
+    install.packages(p)
+    }
+  library(p,character.only = T)
+}
+```
+
+```{r}
+library('readr')
+library('lubridate')
+loyalty <- read_csv('data/loyalty_data.csv')
+creditcard <- read_csv('data/cc_data.csv')
+loyalty$Timestamp = mdy(loyalty$Timestamp)
+creditcard$Timestamp = mdy_hm(creditcard$Timestamp)
+```
+
+
+##Q1
+```{r}
+loyalty_aggregated <- data.frame(loyalty[c('Timestamp','location')])
+loyalty_aggregated$type <- "loyalty"
+creditcard_aggregated <- data.frame(creditcard[c('Timestamp','location')])
+creditcard_aggregated$type <- "creditcard"
+total <- rbind(loyalty_aggregated,creditcard_aggregated)
+```
+
+```{r}
+library(dplyr)
+location_group<- group_by(total,location,type)
+GroupBylocation <- summarise(location_group,count = n())
+```
+
+```{r}
+ggplot(GroupBylocation, aes(x = location, y = count, fill = type)) +
+  geom_bar(stat="identity")
+```
+
+```{r}
+ggplot(GroupBylocation, aes(x = reorder(location,-count), y = count, fill = type)) +
+  geom_bar(position = "dodge",stat="identity")+
+  labs(title = "Frequency of Location", x="Location", y="Frequency")+
+  theme(axis.text.x = element_text(size = 8, 
+                                   family = "myFont", 
+                                   angle = 90))
+```
+
+```{r}
+ggplot(GroupBylocation, aes(x = reorder(location,-count), y = count, fill = type)) +
+  geom_bar(position = "dodge",width=0.8,stat="identity")+
+  labs(title = "Frequency of Location", x="Location", y="Frequency")+
+  theme(axis.text.x = element_text(size = 8, 
+                                   family = "myFont", 
+                                   angle = 90))
+```
+
+
+
+
+
+```{r}
+bgmap<-raster("data/MC2-tourist.jpg")
+```
+
+```{r}
+tm_shape(bgmap) +
+tm_rgb(bgmap, r = 1,g = 2,b = 3,
+       alpha = NA,
+       saturation = 1,
+       interpolate = TRUE,
+       max.value = 255)
+```
+
+```{r}
+Abila_st <- st_read(dsn = "data/Geospatial",
+                    layer = "Abila")
+```
+
+```{r}
+gps <- read_csv("data/gps.csv")
+car <- read_csv("data/car-assignments.csv")
+gps$Timestamp = mdy_hms(gps$Timestamp)
+gps_join <- gps %>% left_join(car, by = 'id')
+```
+
+
+```{r}
+credit_gps_join <- gps_join %>% inner_join(creditcard, by = 'Timestamp')
+credit_gps_join$day <- as.factor(get_day(credit_gps_join$Timestamp))
+```
+
+```{r}
+gps_sf <- st_as_sf(credit_gps_join, 
+                   coords = c("long", "lat"),
+                       crs= 4326)
+```
+
+
+
+```{r}
+gps_path <- gps_sf %>%
+  group_by(id) %>%
+  summarize(m = mean(Timestamp), 
+            do_union=FALSE) %>%
+  st_cast("LINESTRING")
+```
+
+
+```{r}
+gps_path_selected <- gps_path %>%
+  filter(id==1)
+tmap_mode("view")
+tm_shape(bgmap) +
+  tm_rgb(bgmap, r = 1,g = 2,b = 3,
+       alpha = NA,
+       saturation = 1,
+       interpolate = TRUE,
+       max.value = 255) +
+  tm_shape(gps_path_selected) +
+  tm_lines()
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+
+```{r}
+
+```
+
+
+```{r}
+
+```
+
+
+```{r}
+
+```
+
+
+```{r}
+
+```
+
+
+```{r}
+
+```
+
+
+```{r}
+
+```

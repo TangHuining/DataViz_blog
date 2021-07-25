@@ -22,22 +22,15 @@ The background of the study is that in January, 2014, when the leaders of GAStec
 
 
 ## 2.Lecture Review
-There is an increasing trend of usage of line plots, geographic maps, heat maps, histograms, and graphs for time series data. Below is the lecture review of several examples of interactive visual analysis available.
 
-## 2.1 Regional Map
-Regional map can be used to analyze data by region, reflecting the basic natural and economic conditions and regional characteristics of a certain region. The most common example is the administrative area map, which can realize the level-by-level drilling from the province to the city and realize the different degrees of color and label for a certain characteristic. For example, the sales in the figure below can be drilled from province to city. The larger the sales, the darker the color.
+The analysis of the criminal suspect's trajectory and the relationship with the victim are important clues to criminal cases.For analyzing the character's trajectory, there is an increasing trend of usage of line plots, geographic maps, heat maps, histograms, and graphs for time series data. Here are some examples.
 
-## 2.2 Heatmap
-The heatmap is used to convert data into color tones within the geographic coordinate system, and intuitively reflect the distribution, frequency or density of the data in the geographic space through the degree of color change. The following figure shows the level of PM2.5 in environmental monitoring in various regions of the country.
+![](img/1.png){width=50%}
 
-## 2.3 Bubble Map
-Bubble map is a very common visualization map related to geographic location information. It can transmit multi-dimensional information at the same time. The location of the bubble is used to transmit physical location information. The size of the bubble indicates the value of variable 1, and the color of the bubble can be identified. The size/category of variable 2 can be produced as a .gif with a time frame to represent the change of each variable over time.
+The method commonly used in analyzing the relationship between characters is Node relationship graph.
 
-## 2.4 Flow Map
-The flow map displays information or the movement of objects from one location to another and the number of objects on the map. Usually used to display migration data of people, animals, and products. The scale or number of movements represented by a single flow line is represented by its thickness, which helps to show the geographical distribution of migration activities. The flow map is mostly used in scenarios such as interregional trade, traffic flow, population migration, shopping and consumption behavior, communication information flow, and aviation routes. It can also be applied to enterprise cargo transportation and supply chain management. The movement path of the migrants during the Spring Festival is shown in the following figure.
+![](img/2.jpg){width=50%}
 
-## 2.5 Trajectory graph
-Different lines can be identified by different colors, and the size of the line thickness is used to indicate the size of the passenger flow. The thicker the line, the greater the passenger flow, and it can also indicate the direction of the track line. Operators can use this visualization effect to intuitively judge the distribution of passenger flow in a certain period of time and the ride behavior of different routes in order to arrange operations reasonably.
 
 # 3 Data import and preparation
 
