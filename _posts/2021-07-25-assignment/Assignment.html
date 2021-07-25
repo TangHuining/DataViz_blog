@@ -1487,11 +1487,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p><img src="img/2.jpg" style="width:50.0%" /></p>
 <h1 id="data-import-and-preparation">3 Data import and preparation</h1>
 <h2 id="packages-preparing">3.1 Packages preparing</h2>
-The code are like this.
+<p>The code are like this.</p>
 <div class="layout-chunk" data-layout="l-body">
-
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>packages</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"tidyverse"</span>,<span class='st'>"tibble"</span>,<span class='st'>"ggiraph"</span>,<span class='st'>"sf"</span>,<span class='st'>"ggplot2"</span>,<span class='st'>"ggspatial"</span>,<span class='st'>"dplyr"</span>,
+             <span class='st'>"raster"</span>,<span class='st'>"tmap"</span>,<span class='st'>"clock"</span>,<span class='st'>"highcharter"</span>,<span class='st'>"ggforce"</span><span class='op'>)</span>
+<span class='kw'>for</span> <span class='op'>(</span><span class='va'>p</span> <span class='kw'>in</span> <span class='va'>packages</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='kw'>if</span> <span class='op'>(</span><span class='op'>!</span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>require</a></span><span class='op'>(</span><span class='va'>p</span>,character.only <span class='op'>=</span> <span class='cn'>T</span><span class='op'>)</span><span class='op'>)</span><span class='op'>{</span>
+    <span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='va'>p</span><span class='op'>)</span>
+    <span class='op'>}</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'>p</span>,character.only <span class='op'>=</span> <span class='cn'>T</span><span class='op'>)</span>
+<span class='op'>}</span>
+</code></pre>
 </div>
-<p>We need these packages“tidyverse”,“tibble”,“ggiraph”,“sf”,“ggplot2”,“ggspatial”,“dplyr”,“raster”,“tmap”,“clock”,“highcharter”,“ggforce” for analysing and visualization. Expected mapping includes histogram, trajectory graph, heat map, node graph and so on.</p>
+</div>
+<p>We need these packages for analysing and visualization. Expected mapping includes histogram, trajectory graph, heat map, node graph and so on.</p>
 <h2 id="data-preprocessing">3.2 Data preprocessing</h2>
 <p>After a glimpse of the several csv files, we could find the raw data has garbled code due to language problems. As this is a problem of name of Location, it mainly exists in credit card data and loyalty card data.</p>
 <p><img src="img/3.png" style="width:60.0%" /></p>

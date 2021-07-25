@@ -35,8 +35,10 @@ The method commonly used in analyzing the relationship between characters is Nod
 # 3 Data import and preparation
 
 ## 3.1 Packages preparing
+
 The code are like this.
-```{r}
+
+```{r eval=TRUE, echo=TRUE}
 packages = c("tidyverse","tibble","ggiraph","sf","ggplot2","ggspatial","dplyr",
              "raster","tmap","clock","highcharter","ggforce")
 for (p in packages){
@@ -47,7 +49,7 @@ for (p in packages){
 }
 ```
 
-We need these packages"tidyverse","tibble","ggiraph","sf","ggplot2","ggspatial","dplyr","raster","tmap","clock","highcharter","ggforce" for analysing and visualization. Expected mapping includes histogram, trajectory graph, heat map, node graph and so on.
+We need these packages for analysing and visualization. Expected mapping includes histogram, trajectory graph, heat map, node graph and so on.
 
 ## 3.2 Data preprocessing
 
