@@ -75,7 +75,7 @@ Then we could import data for further analysis.
 
 ## 4.1 Anomalies in the credit and loyalty card data
 
-## 4.1.1 Abnormal frequency
+### 4.1.1 Abnormal frequency
 First import two data sets, then change the time type.
 
 ```{r eval=TRUE, echo=TRUE}
@@ -234,6 +234,17 @@ On seeing each person's mmovement and compare it with the actual place of consum
 
 ## 4.3 Infer the owners of each credit card and loyalty card
 
+As mentioned in 4.2, when the time point overlaps, we can compare the location of the employee's consumption with the location of the GPS on the map. If there are multiple overlaps, you can match the employee's card number with the vehicle id. Know the name of the employee.
+
+But this method is more suitable for the credit card data set, because the loyalty card data set has only the date of consumption and no specific time. If you want to use the same method, it is also feasible, but it increases the difficulty of data comparison and reduces the accuracy. Because people's itineraries may have a high degree of overlap.
+
+In addition, there are uncertainties in this method. First of all, the cardholder may not be the person. Secondly, the car parking location may be far away from the shop and therefore cannot be accurately located.
+
 ## 4.4 Potential informal or unofficial relationships among GASTech personnel
 
+If we get the employee's card number, we can more easily judge the potential relationship of each employee.
+First of all, we can combine the name and gps data, and group the data set by location and time. In such a data group, we can get groups of different names. If a group of two people appears multiple times and the GPS location is in a suitable meeting place such as a coffee shop or restaurant, there may be a potential relationship between the two employees.
+
 ## 4.5 Suspicious activity
+
+Based on the above analysis, we can comprehensively analyze suspicious transactions, suspicious interpersonal relationships and suspicious locations, and observe whether these situations overlap to reach a final conclusion.
