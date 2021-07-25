@@ -60,7 +60,13 @@ After a glimpse of the several csv files, we could find the raw data has  garble
 We solved the problem in excel before importing data into R to avoid risk of mistakes.
 
 Also, as we may need to join different data frame, we shall change the name of columns before importing data.
-cc
+
+![](img/cc.png){width=40%} 
+![](img/gps.png){width=40%}
+![](img/loyalty.png){width=40%}
+![](img/car.png){width=50%}
+
+So we would change the CardID to **id** and all timestamp to **Timestamp**.
 
 # 4 Analytics and Visualization
 
