@@ -6,14 +6,14 @@
       "description": "Some additional details about the blog",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-06-20T23:52:00+08:00"
+      "last_modified": "2021-07-25T13:29:28+08:00"
     },
     {
       "path": "index.html",
       "title": "DataViz Blog",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-06-20T23:53:26+08:00"
+      "last_modified": "2021-07-25T13:29:37+08:00"
     }
   ],
   "collections": ["posts/posts.json"]
