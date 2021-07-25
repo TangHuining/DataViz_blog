@@ -41,7 +41,7 @@ The code are like this.
 
 ```{r eval=TRUE, echo=TRUE}
 packages = c("tidyverse","tibble","ggiraph","sf","ggplot2","ggspatial","dplyr",
-             "raster","tmap","clock","highcharter","ggforce",'lubridate','readr')
+             "raster","tmap","clock","highcharter","ggforce",'lubridate','readr','ggbeeswarm')
 for (p in packages){
   if (!require(p,character.only = T)){
     install.packages(p)
@@ -73,8 +73,9 @@ Then we could import data for further analysis.
 
 # 4 Analytics and Visualization
 
-
 ## 4.1 Anomalies in the credit and loyalty card data
+
+First import two data sets, then change the time type.
 
 ```{r eval=TRUE, echo=TRUE}
 loyalty <- read_csv('data/loyalty_data.csv')
@@ -83,19 +84,24 @@ loyalty$Timestamp = mdy(loyalty$Timestamp)
 creditcard$Timestamp = mdy_hm(creditcard$Timestamp)
 ```
 
+Build new data frame of loyalty card and credit card, then use rbind to join all data. finally we got two volumns which are Timestamp and location.
+
 ```{r eval=TRUE, echo=TRUE}
-loyalty_aggregated <- data.frame(loyalty[c('Timestamp','location')])
+loyalty_aggregated <- data.frame(loyalty[c('Timestamp','location','price')])
 loyalty_aggregated$type <- "loyalty"
-creditcard_aggregated <- data.frame(creditcard[c('Timestamp','location')])
+creditcard_aggregated <- data.frame(creditcard[c('Timestamp','location','price')])
 creditcard_aggregated$type <- "creditcard"
 total <- rbind(loyalty_aggregated,creditcard_aggregated)
 ```
 
+Group by location and type to get the times that the card was used in the location.
+
 ```{r eval=TRUE, echo=TRUE}
-library(dplyr)
 location_group<- group_by(total,location,type)
 GroupBylocation <- summarise(location_group,count = n())
 ```
+
+Visualize by barchart.
 
 ```{r eval=TRUE, echo=TRUE}
 ggplot(GroupBylocation, aes(x = reorder(location,-count), y = count, fill = type)) +
@@ -106,15 +112,19 @@ ggplot(GroupBylocation, aes(x = reorder(location,-count), y = count, fill = type
                                    angle = 90))
 ```
 
-```{r eval=TRUE, echo=TRUE}
+We could see the frequency of different location. Most location credict card frequency exceeds loyalty card frequency. The most apparent four locations are Kalami Kafenion, Abila Airport, Coffee Shack, General Grocer. So it is essential to focus on these four places during later analyze. 
+
+
+```{r}
 library(dplyr)
-timestamp_group<- group_by(creditcard_aggregated,Timestamp,type)
+creditcard_aggregated$date <- strftime(as.POSIXlt(creditcard_aggregated$Timestamp),"%d")
+creditcard_aggregated$hour <- strftime(as.POSIXlt(creditcard_aggregated$Timestamp),"%H")
+timestamp_group<- group_by(creditcard_aggregated,date,hour,type)
 GroupBytime <- summarise(timestamp_group,count = n())
-GroupBytime$date <- strftime(as.POSIXlt(GroupBytime$Timestamp),"%d")
-GroupBytime$hour <- strftime(as.POSIXlt(GroupBytime$Timestamp),"%H")
 ```
 
-```{r eval=TRUE, echo=TRUE}
+
+```{r}
 ggplot(GroupBytime, aes(date, hour)) + 
   geom_tile(aes(fill = count),
             colour = "grey") + 
@@ -122,6 +132,20 @@ ggplot(GroupBytime, aes(date, hour)) +
                       high = "steelblue")
 ```
 
+```{r eval=TRUE, echo=TRUE}
+
+```
+
+```{r eval=TRUE, echo=TRUE}
+ggplot(data = total )+
+  aes(y = location, x = price, color = "darkblue") +
+  geom_sina(col = rgb(0,100,0,100,maxColorValue = 300))+
+  geom_beeswarm(cex = 0.5) +
+  coord_flip()+
+  theme(axis.text.x = element_text(size = 8, 
+                                   family = "myFont", 
+                                   angle = 90))
+```
 
 
 ## 4.2 Insights after adding vehicle data
@@ -129,12 +153,6 @@ ggplot(GroupBytime, aes(date, hour)) +
 bgmap<-raster("data/MC2-tourist.tif")
 ```
 
-```{r eval=TRUE, echo=TRUE}
-tmap_mode("plot")
-tm_shape(bgmap) +
-    tm_raster(bgmap,
-              legend.show = FALSE)
-```
 
 
 ```{r eval=TRUE, echo=TRUE}
@@ -173,7 +191,7 @@ gps_sf <- st_as_sf(credit_gps_join,
 
 ```{r eval=TRUE, echo=TRUE}
 gps_path <- gps_sf %>%
-  group_by(id) %>%
+  group_by(id,day) %>%
   summarize(m = mean(Timestamp), 
             do_union=FALSE) %>%
   st_cast("LINESTRING")
