@@ -34,6 +34,19 @@ The method commonly used in analyzing the relationship between characters is Nod
 
 # 3 Data import and preparation
 
+## Library preparing
+
+```{r}
+packages = c("tidyverse","tibble","ggiraph","sf","ggplot2","ggspatial","dplyr",
+             "raster","tmap","clock","highcharter","ggforce")
+for (p in packages){
+  if (!require(p,character.only = T)){
+    install.packages(p)
+    }
+  library(p,character.only = T)
+}
+```
+
 
 # 4 Analytics and Visualization
 
