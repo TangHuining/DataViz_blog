@@ -75,6 +75,7 @@ Then we could import data for further analysis.
 
 ## 4.1 Anomalies in the credit and loyalty card data
 
+## 4.1.1 Abnormal frequency
 First import two data sets, then change the time type.
 
 ```{r eval=TRUE, echo=TRUE}
@@ -114,15 +115,19 @@ ggplot(GroupBylocation, aes(x = reorder(location,-count), y = count, fill = type
 
 We could see the frequency of different location. Most location credict card frequency exceeds loyalty card frequency. The most apparent four locations are Kalami Kafenion, Abila Airport, Coffee Shack, General Grocer. So it is essential to focus on these four places during later analyze. 
 
+In addition, there may also be anomalies in locations with too few transactions. Too few store transactions may be deceptive, and there may be other secret or illegal transactions in the store.
+
+### 4.1.2 Abnormal time
+
+Next we would analyze frequence of different date and hour to determine whether there are any strange value.
 
 ```{r}
-library(dplyr)
 creditcard_aggregated$date <- strftime(as.POSIXlt(creditcard_aggregated$Timestamp),"%d")
 creditcard_aggregated$hour <- strftime(as.POSIXlt(creditcard_aggregated$Timestamp),"%H")
 timestamp_group<- group_by(creditcard_aggregated,date,hour,type)
 GroupBytime <- summarise(timestamp_group,count = n())
 ```
-
+Use ggplot to visualize the data.
 
 ```{r}
 ggplot(GroupBytime, aes(date, hour)) + 
@@ -132,9 +137,10 @@ ggplot(GroupBytime, aes(date, hour)) +
                       high = "steelblue")
 ```
 
-```{r eval=TRUE, echo=TRUE}
+From the picture we could see that there might be some abnormal cost. Most transactions are concentrated in the morning, midnight and evening, and some of the transactions shown in the figure occur in the early morning and midnight, and usually these time periods are not the normal business hours of the store.It may be discovered by analyzing the transactions in these time periods and the corresponding traders.
 
-```
+### 4.1.3 Abnormal price
+At last we would see if there is any strange 
 
 ```{r eval=TRUE, echo=TRUE}
 ggplot(data = total )+
@@ -147,12 +153,36 @@ ggplot(data = total )+
                                    angle = 90))
 ```
 
+We can observe that the distribution of transaction quotas in most shops is relatively even, but there are also cases where a small amount of money is too large. This situation does not rule out the possibility of illegal transactions.
+
+If we could find suspicious people through these transactions and analyze their relationships, it may be helpful to investigate the disappearance.
 
 ## 4.2 Insights after adding vehicle data
+
+GPS data includes time, location, ID, etc. However, since the store does not contain specific coordinates, it is necessary to associate them in order to find out the bank card of a specific employee.
+
+Join gps data and car data with leftjoin.
+
+```{r eval=TRUE, echo=TRUE}
+gps <- read_csv("data/gps.csv")
+car <- read_csv("data/car-assignments.csv")
+gps$Timestamp = mdy_hms(gps$Timestamp)
+gps_join <- gps %>% left_join(car, by = 'id')
+```
+
+We want to determine whether the customer is indeed spending on the customer through the gps data and credit card consumption data at the same time and make the corresponding road map.
+
+```{r eval=TRUE, echo=TRUE}
+credit_gps_join <- gps_join %>% inner_join(creditcard, by = 'Timestamp')
+credit_gps_join$day <- as.factor(get_day(credit_gps_join$Timestamp))
+```
+
+We could see that there are totally around 3000 data.
+Next are steps for visualize each person's movement.
+
 ```{r eval=TRUE, echo=TRUE}
 bgmap<-raster("data/MC2-tourist.tif")
 ```
-
 
 
 ```{r eval=TRUE, echo=TRUE}
@@ -167,19 +197,6 @@ tm_rgb(bgmap, r = 1,g = 2,b = 3,
 ```{r eval=TRUE, echo=TRUE}
 Abila_st <- st_read(dsn = "data/Geospatial",
                     layer = "Abila")
-```
-
-```{r eval=TRUE, echo=TRUE}
-gps <- read_csv("data/gps.csv")
-car <- read_csv("data/car-assignments.csv")
-gps$Timestamp = mdy_hms(gps$Timestamp)
-gps_join <- gps %>% left_join(car, by = 'id')
-```
-
-
-```{r eval=TRUE, echo=TRUE}
-credit_gps_join <- gps_join %>% inner_join(creditcard, by = 'Timestamp')
-credit_gps_join$day <- as.factor(get_day(credit_gps_join$Timestamp))
 ```
 
 ```{r eval=TRUE, echo=TRUE}
@@ -211,6 +228,10 @@ tm_shape(bgmap) +
   tm_shape(gps_path_selected) +
   tm_lines(col = "orange")
 ```
+
+This is an example of one person.
+On seeing each person's mmovement and compare it with the actual place of consumption, so that you can connect the card number with the person's name.
+
 ## 4.3 Infer the owners of each credit card and loyalty card
 
 ## 4.4 Potential informal or unofficial relationships among GASTech personnel
